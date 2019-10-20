@@ -2,6 +2,6 @@ fetch('https://api.imgflip.com/get_memes')
   .then(response =>
     response.status === 200
       ? console.log('Successful request!')
-      : console.error(`"Oops, we get an error ${response.satus}"`)
+      : console.error(`Oops, we get an error ${response.satus}`)
   )
   .catch(error => console.error(error.message));
