@@ -8,7 +8,7 @@ function filterBySize(meme) {
 }
 
 function sortById(firstMeme, nextMeme) {
-  return parseInt(firstMeme.id) - parseInt(nextMeme.id)
+  return parseInt(firstMeme.id) - parseInt(nextMeme.id);
 }
 
 fetch('https://api.imgflip.com/get_memes')
@@ -21,5 +21,5 @@ fetch('https://api.imgflip.com/get_memes')
   .then(data => data.json())
   .then(json => json.data.memes.map(meme => memeRestructuring(meme)))
   .then(memes => memes.filter(meme => filterBySize(meme)))
-  .then(memes => memes.sort(sortById)
+  .then(memes => memes.sort(sortById))
   .catch(error => console.error(error.message));
