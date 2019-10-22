@@ -3,6 +3,10 @@ function memeRestructuring(meme) {
   return { id, name, width, height, url };
 }
 
+function filterBySize(meme) {
+  return meme.height >= 500 || meme.width >= 500;
+}
+
 fetch('https://api.imgflip.com/get_memes')
   .then(response => {
     response.status === 200
@@ -12,4 +16,5 @@ fetch('https://api.imgflip.com/get_memes')
   })
   .then(data => data.json())
   .then(json => json.data.memes.map(meme => memeRestructuring(meme)))
+  .then(memes => memes.filter(meme => filterBySize(meme)))
   .catch(error => console.error(error.message));
