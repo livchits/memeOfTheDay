@@ -5,4 +5,5 @@ fetch('https://api.imgflip.com/get_memes')
       : console.error(`Oops, we get an error ${response.satus}`);
     return response;
   })
+  .then(data => data.json())
   .catch(error => console.error(error.message));
