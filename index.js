@@ -19,8 +19,8 @@ fetch('https://api.imgflip.com/get_memes')
     return response;
   })
   .then(data => data.json())
-  .then(json => json.data.memes.map(meme => memeRestructuring(meme)))
-  .then(memes => memes.filter(meme => filterBySize(meme)))
+  .then(json => json.data.memes.map(memeRestructuring))
+  .then(memes => memes.filter(filterBySize))
   .then(filteredMemes => filteredMemes.sort(sortById))
   .then(sortedMemes => console.dir(sortedMemes))
   .catch(error => console.error(error.message));
