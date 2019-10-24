@@ -21,6 +21,10 @@ function sortById(firstMeme, nextMeme) {
   return parseInt(firstMeme.id) - parseInt(nextMeme.id);
 }
 
+function sortMemes(memes) {
+  return memes.sort(sortById);
+}
+
 fetch('https://api.imgflip.com/get_memes')
   .then(response => {
     response.status === 200
@@ -32,6 +36,6 @@ fetch('https://api.imgflip.com/get_memes')
   .then(json => json.data.memes)
   .then(getMemesData)
   .then(filterMemes)
-  .then(filteredMemes => filteredMemes.sort(sortById))
+  .then(sortMemes)
   .then(sortedMemes => console.dir(sortedMemes))
   .catch(error => console.error(error.message));
