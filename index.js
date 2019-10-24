@@ -1,3 +1,8 @@
+function getMemesData(memes) {
+  const memesData = memes.map(memeRestructuring);
+  return memesData;
+}
+
 function memeRestructuring(meme) {
   const { id, name, width, height, url } = meme;
   return { id, name, width, height, url };
@@ -19,7 +24,8 @@ fetch('https://api.imgflip.com/get_memes')
     return response;
   })
   .then(data => data.json())
-  .then(json => json.data.memes.map(memeRestructuring))
+  .then(json => json.data.memes)
+  .then(getMemesData)
   .then(memes => memes.filter(filterBySize))
   .then(filteredMemes => filteredMemes.sort(sortById))
   .then(sortedMemes => console.dir(sortedMemes))
