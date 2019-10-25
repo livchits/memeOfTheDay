@@ -10,3 +10,5 @@ export function getMemes(URL) {
     .then(json => json.data.memes)
     .catch(error => console.error(error.message));
 }
+
+export const ENDPOINT = 'https://api.imgflip.com/get_memes';
