@@ -1,3 +1,5 @@
+import { getMemes, ENDPOINT } from './api.js';
+
 function getMemesData(memes) {
   const memesData = memes.map(memeRestructuring);
   return memesData;
