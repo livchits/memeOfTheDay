@@ -27,8 +27,18 @@ function sortMemes(memes) {
   return memes.sort(sortById);
 }
 
+function todayDate() {
+  const today = new Date();
+  const todayDate = today.getDate();
+  return todayDate;
+}
+
+function getMemeOfTheDay(memes) {
+  return memes[todayDate() - 1];
+}
+
 getMemes(ENDPOINT)
   .then(getMemesData)
   .then(filterMemes)
   .then(sortMemes)
-  .then(sortedMemes => console.dir(sortedMemes))
+  .then(sortedMemes => console.dir(sortedMemes));
