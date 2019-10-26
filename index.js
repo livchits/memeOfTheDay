@@ -48,6 +48,7 @@ function getRandomMeme(memes) {
 }
 
 const img = document.querySelector('.meme');
+const h1 = document.querySelector('h1');
 
 getMemes(ENDPOINT)
   .then(getMemesData)
@@ -61,3 +62,6 @@ getMemes(ENDPOINT)
     const todayMeme = getMemeOfTheDay(sortedMemes);
     img.src = todayMeme.url;
   });
+
+//Seguir desde parte 5.3 (funcionalidad del botón)
+//También faltan agregar estilos
