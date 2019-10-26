@@ -53,4 +53,11 @@ getMemes(ENDPOINT)
   .then(getMemesData)
   .then(filterMemes)
   .then(sortMemes)
-  .then(sortedMemes => console.dir(sortedMemes));
+  .then(sortedMemes => {
+    console.dir(sortedMemes);
+    return sortedMemes;
+  })
+  .then(sortedMemes => {
+    const todayMeme = getMemeOfTheDay(sortedMemes);
+    img.src = todayMeme.url;
+  });
