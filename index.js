@@ -65,7 +65,7 @@ getMemes(ENDPOINT)
     img.alt = todayMeme.name;
   });
 
-randomButton.addEventListener('click', e => {
+randomButton.addEventListener('click', () => {
   h1.textContent = 'Random Meme';
   randomButton.textContent = 'Get another random Meme!';
   getMemes(ENDPOINT).then(memes => {
