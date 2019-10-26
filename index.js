@@ -47,6 +47,8 @@ function getRandomMeme(memes) {
   return randomMeme;
 }
 
+const img = document.querySelector('.meme');
+
 getMemes(ENDPOINT)
   .then(getMemesData)
   .then(filterMemes)
