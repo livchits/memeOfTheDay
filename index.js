@@ -37,6 +37,16 @@ function getMemeOfTheDay(memes) {
   return memes[todayDate() - 1];
 }
 
+function getRandomIndex(array) {
+  const randomIndex = Math.floor(Math.random() * array.length);
+  return randomIndex;
+}
+
+function getRandomMeme(memes) {
+  const randomMeme = memes[getRandomIndex(memes)];
+  return randomMeme;
+}
+
 getMemes(ENDPOINT)
   .then(getMemesData)
   .then(filterMemes)
