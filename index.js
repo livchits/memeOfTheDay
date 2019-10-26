@@ -62,6 +62,7 @@ getMemes(ENDPOINT)
   .then(sortedMemes => {
     const todayMeme = getMemeOfTheDay(sortedMemes);
     img.src = todayMeme.url;
+    img.alt = todayMeme.name;
   });
 
 randomButton.addEventListener('click', e => {
