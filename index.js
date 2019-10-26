@@ -64,5 +64,12 @@ getMemes(ENDPOINT)
     img.src = todayMeme.url;
   });
 
-//Seguir desde parte 5.3 (funcionalidad del botón)
-//También faltan agregar estilos
+randomButton.addEventListener('click', e => {
+  h1.textContent = 'Random Meme';
+  randomButton.textContent = 'Get another random Meme!';
+  getMemes(ENDPOINT).then(memes => {
+    const randomMeme = getRandomMeme(memes);
+    img.src = randomMeme.url;
+    img.alt = randomMeme.name;
+  });
+});
