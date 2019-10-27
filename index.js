@@ -32,6 +32,7 @@ function getRandomMeme(memes) {
 const img = document.querySelector('.meme');
 const h1 = document.querySelector('h1');
 const randomButton = document.querySelector('.btn-get-random-meme');
+let memesArray;
 
 getMemes(ENDPOINT)
   .then(getMemesData)
@@ -39,9 +40,7 @@ getMemes(ENDPOINT)
   .then(filteredMemes => filteredMemes.sort(byAscendingId))
   .then(sortedMemes => {
     console.dir(sortedMemes);
-    return sortedMemes;
-  })
-  .then(sortedMemes => {
+    memesArray = sortedMemes;
     const todayMeme = getMemeOfTheDay(sortedMemes);
     img.src = todayMeme.url;
     img.alt = todayMeme.name;
