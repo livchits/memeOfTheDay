@@ -23,13 +23,9 @@ function getMemeOfTheDay(memes) {
   return memes[todayDate - 1];
 }
 
-function getRandomIndex(array) {
-  const randomIndex = Math.floor(Math.random() * array.length);
-  return randomIndex;
-}
-
 function getRandomMeme(memes) {
-  const randomMeme = memes[getRandomIndex(memes)];
+  const randomIndex = Math.floor(Math.random() * memes.length);
+  const randomMeme = memes[randomIndex];
   return randomMeme;
 }
 
