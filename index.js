@@ -14,7 +14,7 @@ function biggerThan({ height, width }, size) {
   return height >= size || width >= size;
 }
 
-function sortById(firstMeme, nextMeme) {
+function byAscendingId(firstMeme, nextMeme) {
   return parseInt(firstMeme.id) - parseInt(nextMeme.id);
 }
 
@@ -49,7 +49,7 @@ const randomButton = document.querySelector('.btn-get-random-meme');
 getMemes(ENDPOINT)
   .then(getMemesData)
   .then(memes => memes.filter(biggerThan))
-  .then(sortMemes)
+  .then(filteredMemes => filteredMemes.sort(byAscendingId))
   .then(sortedMemes => {
     console.dir(sortedMemes);
     return sortedMemes;
