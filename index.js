@@ -49,9 +49,7 @@ getMemes(ENDPOINT)
 randomButton.addEventListener('click', () => {
   h1.textContent = 'Random Meme';
   randomButton.textContent = 'Get another random Meme!';
-  getMemes(ENDPOINT).then(memes => {
-    const randomMeme = getRandomMeme(memes);
-    img.src = randomMeme.url;
-    img.alt = randomMeme.name;
-  });
+  const randomMeme = getRandomMeme(memesArray);
+  img.src = randomMeme.url;
+  img.alt = randomMeme.name;
 });
