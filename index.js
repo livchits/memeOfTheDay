@@ -10,8 +10,8 @@ function memeRestructuring(meme) {
   return { id, name, width, height, url };
 }
 
-function filterBySize(meme) {
-  return meme.height >= 500 || meme.width >= 500;
+function biggerThan({ height, width }, size) {
+  return height >= size || width >= size;
 }
 
 function filterMemes(memes) {
@@ -53,7 +53,7 @@ const randomButton = document.querySelector('.btn-get-random-meme');
 
 getMemes(ENDPOINT)
   .then(getMemesData)
-  .then(filterMemes)
+  .then(memes => memes.filter(biggerThan))
   .then(sortMemes)
   .then(sortedMemes => {
     console.dir(sortedMemes);
