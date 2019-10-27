@@ -18,14 +18,9 @@ function byAscendingId(firstMeme, nextMeme) {
   return parseInt(firstMeme.id) - parseInt(nextMeme.id);
 }
 
-function todayDate() {
-  const today = new Date();
-  const todayDate = today.getDate();
-  return todayDate;
-}
-
 function getMemeOfTheDay(memes) {
-  return memes[todayDate() - 1];
+  const todayDate = new Date().getDate();
+  return memes[todayDate - 1];
 }
 
 function getRandomIndex(array) {
