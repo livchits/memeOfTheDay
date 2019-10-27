@@ -14,11 +14,6 @@ function biggerThan({ height, width }, size) {
   return height >= size || width >= size;
 }
 
-function filterMemes(memes) {
-  const filteredMemes = memes.filter(filterBySize);
-  return filteredMemes;
-}
-
 function sortById(firstMeme, nextMeme) {
   return parseInt(firstMeme.id) - parseInt(nextMeme.id);
 }
