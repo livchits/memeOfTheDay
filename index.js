@@ -18,10 +18,6 @@ function byAscendingId(firstMeme, nextMeme) {
   return parseInt(firstMeme.id) - parseInt(nextMeme.id);
 }
 
-function sortMemes(memes) {
-  return memes.sort(sortById);
-}
-
 function todayDate() {
   const today = new Date();
   const todayDate = today.getDate();
