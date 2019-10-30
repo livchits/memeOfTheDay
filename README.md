@@ -13,3 +13,7 @@ The page was created as a part of the [Undefined School](https://github.com/unde
 - HTML
 - CSS
 - JavaScript, including DOM manipulation and Fetch API
+
+## Launch
+
+You can see the page in [GitHub Pages](https://livchits.github.io/memeOfTheDay/) or clone it in any webserver.
