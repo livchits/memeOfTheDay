@@ -29,6 +29,14 @@ function getRandomMeme(memes) {
   return randomMeme;
 }
 
+function showRandomMeme() {
+  h1.textContent = 'Random Meme';
+  randomButton.textContent = 'Get another random Meme!';
+  const randomMeme = getRandomMeme(memesArray);
+  img.src = randomMeme.url;
+  img.alt = randomMeme.name;
+}
+
 const img = document.querySelector('.meme');
 const h1 = document.querySelector('h1');
 const randomButton = document.querySelector('.btn-get-random-meme');
@@ -46,10 +54,4 @@ getMemes(ENDPOINT)
     img.alt = todayMeme.name;
   });
 
-randomButton.addEventListener('click', () => {
-  h1.textContent = 'Random Meme';
-  randomButton.textContent = 'Get another random Meme!';
-  const randomMeme = getRandomMeme(memesArray);
-  img.src = randomMeme.url;
-  img.alt = randomMeme.name;
-});
+randomButton.addEventListener('click', showRandomMeme);
