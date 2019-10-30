@@ -1,6 +1,6 @@
 # The Meme of The Day - A web page
 
-It is a little web page that show a different meme every day of the month and a random meme when the correspondent button is clicked.
+It is a simple web page that show a different meme every day of the month and a random meme when the correspondent button is clicked.
 
 ## General info
 
