@@ -44,7 +44,7 @@ let memesArray;
 
 getMemes(ENDPOINT)
   .then(getMemesData)
-  .then(memes => memes.filter(biggerThan))
+  .then(memes => memes.filter(meme => biggerThan(meme, 500)))
   .then(filteredMemes => filteredMemes.sort(byAscendingId))
   .then(sortedMemes => {
     console.dir(sortedMemes);
