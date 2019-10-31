@@ -17,7 +17,7 @@ body {
 }
 
 h1 {
-  font-family: "Bungee Shade", sans-serif;
+  font-family: 'Bungee Shade', sans-serif;
   font-size: 2.2em;
   text-align: center;
   margin: 20px;
@@ -46,6 +46,10 @@ h1 {
   max-width: 100%;
 }
 
+.image-container {
+  position: relative;
+}
+
 .image-container:hover .meme {
   opacity: 0.3;
 }
@@ -57,7 +61,7 @@ h1 {
 .btn-get-random-meme,
 .meme-text {
   margin: 20px;
-  font-family: "Arial black", sans-serif;
+  font-family: 'Arial black', sans-serif;
   font-variant: small-caps;
   font-weight: bolder;
   font-size: 0.9em;
@@ -83,19 +87,8 @@ h1 {
 }
 
 .glow-on-hover:before {
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
   position: absolute;
   top: -2px;
   left: -2px;
@@ -124,7 +117,7 @@ h1 {
 
 .glow-on-hover:after {
   z-index: -1;
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 100%;
