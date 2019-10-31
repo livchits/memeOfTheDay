@@ -5,8 +5,7 @@ function getMemesData(memes) {
   return memesData;
 }
 
-function memeRestructuring(meme) {
-  const { id, name, width, height, url } = meme;
+function memeRestructuring({ id, name, width, height, url }) {
   return { id, name, width, height, url };
 }
 
@@ -23,6 +22,13 @@ function getMemeOfTheDay(memes) {
   return memes[todayDate - 1];
 }
 
+function showMemeOfTheDay() {
+  const todayMeme = getMemeOfTheDay(memesArray);
+  img.src = todayMeme.url;
+  img.alt = todayMeme.name;
+  memeText.textContent = todayMeme.name;
+}
+
 function getRandomMeme(memes) {
   const randomIndex = Math.floor(Math.random() * memes.length);
   const randomMeme = memes[randomIndex];
@@ -35,11 +41,13 @@ function showRandomMeme() {
   const randomMeme = getRandomMeme(memesArray);
   img.src = randomMeme.url;
   img.alt = randomMeme.name;
+  memeText.textContent = randomMeme.name;
 }
 
 const img = document.querySelector('.meme');
 const h1 = document.querySelector('h1');
 const randomButton = document.querySelector('.btn-get-random-meme');
+const memeText = document.querySelector(".meme-text");
 let memesArray;
 
 getMemes(ENDPOINT)
@@ -49,9 +57,7 @@ getMemes(ENDPOINT)
   .then(sortedMemes => {
     console.dir(sortedMemes);
     memesArray = sortedMemes;
-    const todayMeme = getMemeOfTheDay(sortedMemes);
-    img.src = todayMeme.url;
-    img.alt = todayMeme.name;
+    showMemeOfTheDay();
   });
 
 randomButton.addEventListener('click', showRandomMeme);

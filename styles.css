@@ -20,22 +20,58 @@ h1 {
   font-family: 'Bungee Shade', sans-serif;
   font-size: 2.2em;
   text-align: center;
-  margin: 10px;
+  margin: 20px;
 }
 
-img {
+.meme {
+  opacity: 1;
   display: block;
   max-width: 80vw;
-  margin: 0px 20px;
+  max-height: 66vh;
+  border-radius: 10px;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
 }
 
-.btn-get-random-meme {
+.meme-text-container {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container:hover .meme {
+  opacity: 0.3;
+}
+
+.image-container:hover .meme-text-container {
+  opacity: 1;
+}
+
+.btn-get-random-meme,
+.meme-text {
   margin: 20px;
-  font-family: sans-serif;
+  font-family: 'Arial black', sans-serif;
   font-variant: small-caps;
   font-weight: bolder;
   font-size: 0.9em;
   color: rgb(145, 219, 194);
+  text-shadow: 2px 2px rgb(145, 66, 66);
+}
+
+.meme-text {
+  color: rgb(20, 20, 20);
+  font-size: 1.5em;
 }
 
 .glow-on-hover {
