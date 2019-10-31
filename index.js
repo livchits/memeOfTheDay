@@ -5,8 +5,7 @@ function getMemesData(memes) {
   return memesData;
 }
 
-function memeRestructuring(meme) {
-  const { id, name, width, height, url } = meme;
+function memeRestructuring({ id, name, width, height, url }) {
   return { id, name, width, height, url };
 }
 
