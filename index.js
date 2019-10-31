@@ -42,6 +42,7 @@ function showRandomMeme() {
   const randomMeme = getRandomMeme(memesArray);
   img.src = randomMeme.url;
   img.alt = randomMeme.name;
+  memeText.textContent = randomMeme.name;
 }
 
 const img = document.querySelector('.meme');
