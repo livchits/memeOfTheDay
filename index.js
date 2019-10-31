@@ -40,6 +40,7 @@ function showRandomMeme() {
 const img = document.querySelector('.meme');
 const h1 = document.querySelector('h1');
 const randomButton = document.querySelector('.btn-get-random-meme');
+const memeText = document.querySelector(".meme-text");
 let memesArray;
 
 getMemes(ENDPOINT)
