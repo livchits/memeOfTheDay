@@ -9,6 +9,14 @@ body {
   height: 100vh;
 }
 
+header {
+  position: absolute;
+  right: 0px;
+  font-size: 1em;
+  color: rgb(20, 20, 20);
+  margin: 10px;
+}
+
 .container {
   height: 100vh;
   display: flex;
