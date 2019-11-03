@@ -10,10 +10,10 @@ body {
 }
 
 header,
-header > a:active {
+header > a:visited {
   position: absolute;
   right: 0px;
-  font-size: 1em;
+  /* font-size: 1em; */
   color: rgb(20, 20, 20);
   margin: 10px;
 }
