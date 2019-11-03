@@ -9,7 +9,8 @@ body {
   height: 100vh;
 }
 
-header {
+header,
+header > a:active {
   position: absolute;
   right: 0px;
   font-size: 1em;
