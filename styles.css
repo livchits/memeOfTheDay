@@ -164,3 +164,22 @@ h1 {
     background-position: 0 0;
   }
 }
+
+@media all and (max-width: 640px) {
+  header {
+    position: relative;
+    order: 1;
+    align-self: center;
+    margin: 0;
+    font-size: 0.8em;
+    padding-bottom: 0.3em;
+  }
+
+  .image-container {
+    height: 60vh;
+  }
+
+  h1 {
+    margin: 10px;
+  }
+}
