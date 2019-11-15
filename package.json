@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build:tailwind": "tailwind build src/styles.css -o dist/compiled.css",
-    "build:css": "postcss src/styles.css -o dist/compiled.css"
+    "build:css": "postcss src/styles.css -o dist/compiled.css",
+    "build:purgecss": "NODE_ENV=production postcss src/styles.css -o dist/compiled.css",
   },
   "repository": {
     "type": "git",
