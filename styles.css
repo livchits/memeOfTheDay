@@ -58,7 +58,7 @@ h1 {
 .meme {
   opacity: 1;
   display: block;
-  max-width: 80vw;
+  max-width: 90vw;
   max-height: 66vh;
   border-radius: 10px;
   transition: 0.5s ease;
