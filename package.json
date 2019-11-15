@@ -1,5 +1,5 @@
 {
-  "name": "memeOfTheDay",
+  "name": "meme-of-the-day",
   "version": "1.0.0",
   "description": "It is a simple web page that show a different meme every day of the month and a random meme when the correspondent button is clicked.",
   "main": "index.js",
