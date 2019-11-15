@@ -4,6 +4,7 @@
   "description": "It is a simple web page that show a different meme every day of the month and a random meme when the correspondent button is clicked.",
   "main": "index.js",
   "scripts": {
+    "build:tailwind": "tailwind build src/styles.css -o dist/compiled.css",
     "build:css": "postcss src/styles.css -o dist/compiled.css"
   },
   "repository": {
