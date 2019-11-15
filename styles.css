@@ -105,6 +105,10 @@ h1 {
   text-shadow: 2px 2px rgb(145, 66, 66);
 }
 
+.btn-get-random-meme {
+  margin-top: 0;
+}
+
 .meme-text {
   color: rgb(20, 20, 20);
   font-size: 1.2em;
