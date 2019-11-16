@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.h-90s {
-  height: 90vh;
+.h-85s {
+  height: 85vh;
 }
 
 .h-60s {
