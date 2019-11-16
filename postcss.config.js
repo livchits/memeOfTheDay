@@ -1,13 +1,13 @@
-const tailwindcss = require("tailwindcss");
-const autoprefixer = require("autoprefixer");
-const cssnano = require("cssnano")({
-  preset: "default"
+const tailwindcss = require('tailwindcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano')({
+  preset: 'default'
 });
-const purgecss = require("@fullhuman/postcss-purgecss")({
-  content: ["./dist/index.html"],
+const purgecss = require('@fullhuman/postcss-purgecss')({
+  content: ['./dist/index.html'],
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
 });
 
 module.exports = {
-  plugins: [tailwindcss, autoprefixer, cssnano, ...(process.env.NODE_ENV === "production" ? [purgecss] : [])]
+  plugins: [tailwindcss, autoprefixer, cssnano, ...(process.env.NODE_ENV === 'production' ? [purgecss] : [])]
 };
