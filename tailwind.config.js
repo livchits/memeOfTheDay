@@ -1,7 +1,10 @@
 module.exports = {
   theme: {
-    extend: {}
+    extend: {},
+    fontFamily: {
+      bungee: ['Bungee Shade', 'sans-serif']
+    }
   },
   variants: {},
   plugins: []
-}
+};
