@@ -3,7 +3,8 @@ module.exports = {
     extend: {},
     fontFamily: {
       bungee: ['Bungee Shade', 'sans-serif'],
-      montserrat: ['Montserrat', 'sans-serif']
+      montserrat: ['Montserrat', 'sans-serif'],
+      arialB: ['Arial black', 'sans-serif']
     }
   },
   variants: {
