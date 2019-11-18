@@ -6,6 +6,8 @@ module.exports = {
       montserrat: ['Montserrat', 'sans-serif']
     }
   },
-  variants: {},
+  variants: {
+    opacity: ['responsive', 'hover', 'focus', 'active', 'group-hover']
+  },
   plugins: []
 };
