@@ -16,7 +16,9 @@ module.exports = {
       full: '100%'
     },
     height: {
-      '60': '60vh'
+      '60': '60vh',
+      '85': '85vh',
+      screen: '100vh'
     }
   },
   variants: {
