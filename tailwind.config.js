@@ -18,7 +18,8 @@ module.exports = {
     height: {
       '60': '60vh',
       '85': '85vh',
-      screen: '100vh'
+      screen: '100vh',
+      '4': '4rem'
     }
   },
   variants: {
