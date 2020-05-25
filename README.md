@@ -16,7 +16,7 @@ The page was created as a part of the [Undefined School](https://github.com/unde
 
 ## Launch
 
-You can see the page in [GitHub Pages](https://livchits.github.io/memeOfTheDay/), [Netlify](https://keen-northcutt-be6380.netlify.com/) and [Now](https://memeoftheday-technical-okapi-45.now.sh/) or clone it on any webserver.
+You can see the page in [GitHub Pages](https://livchits.github.io/memeOfTheDay/), [Netlify](https://keen-northcutt-be6380.netlify.com/) and [Now](https://memeoftheday.now.sh/) or clone it on any webserver.
 
 ## Sources
 
