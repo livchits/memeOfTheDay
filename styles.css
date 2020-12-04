@@ -48,7 +48,7 @@ footer {
 }
 
 h1 {
-  font-family: "Bungee Shade", sans-serif;
+  font-family: 'Bungee Shade', sans-serif;
   font-size: 2.2em;
   text-align: center;
   line-height: 2.5rem;
@@ -130,7 +130,18 @@ h1 {
 
 .glow-on-hover:before {
   content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
   position: absolute;
   top: -2px;
   left: -2px;

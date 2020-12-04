@@ -47,14 +47,14 @@ function showRandomMeme() {
 const img = document.querySelector('.meme');
 const h1 = document.querySelector('h1');
 const randomButton = document.querySelector('.btn-get-random-meme');
-const memeText = document.querySelector(".meme-text");
+const memeText = document.querySelector('.meme-text');
 let memesArray;
 
 getMemes(ENDPOINT)
   .then(getMemesData)
-  .then(memes => memes.filter(meme => biggerThan(meme, 500)))
-  .then(filteredMemes => filteredMemes.sort(byAscendingId))
-  .then(sortedMemes => {
+  .then((memes) => memes.filter((meme) => biggerThan(meme, 500)))
+  .then((filteredMemes) => filteredMemes.sort(byAscendingId))
+  .then((sortedMemes) => {
     console.dir(sortedMemes);
     memesArray = sortedMemes;
     showMemeOfTheDay();
