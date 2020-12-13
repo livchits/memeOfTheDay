@@ -42,6 +42,12 @@ function showRandomMeme() {
   img.src = randomMeme.url;
   img.alt = randomMeme.name;
   memeText.textContent = randomMeme.name;
+  img.classList.remove('fade-in');
+  setTimeout(() => {
+    img.classList.add('fade-in');
+  }, 0);
+
+  // img.classList.add('fade-in');
 }
 
 const img = document.querySelector('.meme');
